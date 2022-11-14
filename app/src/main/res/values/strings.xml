@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SportfogadasSegito</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="szelvenyek">Szelvények</string>
+    <string name="statisztikak">Statisztikák</string>
+    <string name="csapatstatisztikak">CsapatStatisztikák</string>
+    <string name="win">WIN</string>
+    <string name="lose">LOSE</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="expectedPrize">Expected Prize</string>
+    <string name="isEnded">Is is ended?</string>
+    <string name="new_szelveny">New Szelveny</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="isWin">isWin</string>
+    <string name="homeScore">Home Score</string>
+    <string name="awayScore">Away Score</string>
+    <string name="awayTeam">Away Team</string>
+    <string name="homeTeam">Home Team</string>
+    <string name="odds">Odds</string>
+    <string name="whowillwin">Who will win?</string>
+    <string name="new_meccs">New Meccs</string>
+    <string name="willhomewin">Will home win?</string>
+</resources>
