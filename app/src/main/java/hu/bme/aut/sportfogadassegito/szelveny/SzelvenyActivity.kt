@@ -22,7 +22,6 @@ class SzelvenyActivity: AppCompatActivity(), SzelvenyAdapter.SzelvenyClickListen
     private lateinit var adapter: SzelvenyAdapter
 
     private lateinit var meccsDB: MeccsDatabase
-    private lateinit var meccsAdapter: MeccsAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySzelvenyBinding.inflate(layoutInflater)
