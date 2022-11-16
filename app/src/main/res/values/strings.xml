@@ -24,4 +24,12 @@
     <string name="whowillwin">Who will win?</string>
     <string name="new_meccs">New Meccs</string>
     <string name="willhomewin">Will home win?</string>
+    <string name="add">Add</string>
+    <string name="newteam">New</string>
+    <string name="winrate">Winrate:</string>
+    <string name="profit">Profit:</string>
+    <string name="melyikcsapat">Melyik csapatra vagy kíváncsi?</string>
+    <string name="search">Search</string>
+    <string name="teamwinrate">Team\'s winrate:</string>
+    <string name="yourwinrateonteammatches">"Your prediction winrate on team's matches: "</string>
 </resources>

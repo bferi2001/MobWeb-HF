@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
@@ -47,7 +48,7 @@ class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
             .setNegativeButton(R.string.button_cancel, null)
             .create()
     }
-    private fun isValid() = binding.etHomeTeam.text.isNotEmpty()&&binding.etAwayTeam.text.isNotEmpty()&&binding.etMatchOdds.text.isNotEmpty()
+    private fun isValid() = binding.etHomeTeam.text.toString().isNotEmpty()&&binding.etAwayTeam.text.toString().isNotEmpty()&&binding.etMatchOdds.text.isNotEmpty()
 
     private fun getMeccs() = Meccs(
         szelvenyId = szelvenyId,
@@ -55,7 +56,7 @@ class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
         awayName = binding.etAwayTeam.text.toString(),
         homeScore = binding.etHomeScore.text.toString().toIntOrNull() ?:0,
         awayScore = binding.etAwayScore.text.toString().toIntOrNull() ?:0,
-        odds = binding.etMatchOdds.text.toString().toInt(),
+        odds = binding.etMatchOdds.text.toString().toDouble(),
         expectedWinner=binding.isHome.isChecked,
         isWin = binding.isWin.isChecked,
         isEnded = binding.isEnded.isChecked

@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         binding.buttontoSzelvenyek.setOnClickListener{
             startActivity(Intent(this, SzelvenyActivity::class.java))
         }
+
+        binding.buttontoStatisztika.setOnClickListener{
+            startActivity(Intent(this, StatisztikakActivity::class.java))
+        }
+        binding.buttontoTeamStatisztika.setOnClickListener{
+            startActivity(Intent(this, CsapatStatisztikakActivity::class.java))
+        }
     }
 
 

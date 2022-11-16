@@ -6,8 +6,13 @@ import hu.bme.aut.sportfogadassegito.szelveny.data.Szelveny
 
 @Dao
 interface MeccsDAO {
+    @Query("SELECT * FROM meccsek")
+    fun getAll(): List<Meccs>
     @Query("SELECT * FROM meccsek WHERE szelvenyId= :szelvenyNumber")
     fun getSelected(szelvenyNumber: Long): List<Meccs>
+
+    @Query("SELECT * FROM meccsek WHERE homeName= :TeamName OR awayName = :TeamName")
+    fun getMeccsekForTeam(TeamName: String): List<Meccs>
 
     @Insert
     fun insert(meccs: Meccs): Long
@@ -21,6 +26,12 @@ interface MeccsDAO {
     @Delete
     fun deleteSelectedSzelveny(szelveny: Szelveny){
         for(items in getSelected(szelveny.id!!)){
+            deleteItem(items)
+        }
+    }
+    @Delete
+    fun deleteAll(){
+        for(items in getAll()){
             deleteItem(items)
         }
     }

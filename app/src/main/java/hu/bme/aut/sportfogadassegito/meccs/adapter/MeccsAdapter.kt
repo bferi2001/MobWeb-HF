@@ -1,5 +1,6 @@
 package hu.bme.aut.sportfogadassegito.meccs.adapter
 
+import android.annotation.SuppressLint
 import android.view.*
 import androidx.recyclerview.widget.RecyclerView
 import hu.bme.aut.sportfogadassegito.databinding.ItemMeccsekBinding
@@ -8,26 +9,28 @@ import hu.bme.aut.sportfogadassegito.meccs.data.Meccs
 class MeccsAdapter(private val listener: MeccsClickListener) :
     RecyclerView.Adapter<MeccsAdapter.MeccsViewHolder>() {
 
-
+//todo lenyitható ablak csapatválasztó
+    //todo radiobutton kinyer
     private val items = mutableListOf<Meccs>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MeccsViewHolder(
         ItemMeccsekBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
+
 
     override fun onBindViewHolder(holder: MeccsViewHolder, position: Int) {
         val meccsItem = items[position]
 
         holder.binding.isWin.isChecked = meccsItem.isWin
         holder.binding.tvStartingTime.text = "ToDo"
-        holder.binding.tvHomeTeam.text = meccsItem.homeName
-        holder.binding.tvAwayTeam.text = meccsItem.awayName
-        holder.binding.tvHomeScore.text = "${meccsItem.homeScore}"
+        holder.binding.tvHomeTeam.text = "${meccsItem.homeName} : "
+        holder.binding.tvAwayTeam.text = "${meccsItem.awayName   }"
+        holder.binding.tvHomeScore.text = "   ${meccsItem.homeScore}:"
         holder.binding.tvAwayScore.text = "${meccsItem.awayScore}"
-        holder.binding.tvOdds.text="${meccsItem.odds}"
+        holder.binding.tvOdds.text="  Odds: ${meccsItem.odds}"
         if(meccsItem.expectedWinner){
-            holder.binding.tvExpectedWinner.text= meccsItem.homeName
+            holder.binding.tvExpectedWinner.text= "Chosed: ${meccsItem.homeName}"
         }else{
-            holder.binding.tvExpectedWinner.text= meccsItem.awayName
+            holder.binding.tvExpectedWinner.text= "Chosed: ${meccsItem.awayName}"
         }
 
 

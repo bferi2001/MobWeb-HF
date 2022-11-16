@@ -3,6 +3,7 @@ package hu.bme.aut.sportfogadassegito.meccs
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import hu.bme.aut.sportfogadassegito.databinding.ActivityMeccsBinding
@@ -10,6 +11,7 @@ import hu.bme.aut.sportfogadassegito.meccs.adapter.MeccsAdapter
 import hu.bme.aut.sportfogadassegito.meccs.data.Meccs
 import hu.bme.aut.sportfogadassegito.meccs.data.MeccsDatabase
 import hu.bme.aut.sportfogadassegito.meccs.fragment.NewMeccsDialogFragment
+import hu.bme.aut.sportfogadassegito.team.data.TeamDatabase
 import kotlin.concurrent.thread
 import kotlin.properties.Delegates
 
@@ -26,10 +28,15 @@ class MeccsActivity(): AppCompatActivity(), MeccsAdapter.MeccsClickListener, New
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
+
+
+
+
         val recivedIntent = intent
         szelvenyId = recivedIntent.getLongExtra("SZELVENY_SZAM", 0)
 
         database = MeccsDatabase.getDatabase(applicationContext)
+
 
         binding.fab.setOnClickListener {
             NewMeccsDialogFragment(szelvenyId).show(

@@ -11,7 +11,7 @@ data class Meccs(
     @ColumnInfo(name = "awayName") var awayName: String,
     @ColumnInfo(name = "homeScore") var homeScore: Int,
     @ColumnInfo(name = "awayScore") var awayScore: Int,
-    @ColumnInfo(name = "odds") var odds: Int,
+    @ColumnInfo(name = "odds") var odds: Double,
     @ColumnInfo(name = "isWin") var isWin: Boolean,
     @ColumnInfo(name = "isEnded") var isEnded: Boolean
 )

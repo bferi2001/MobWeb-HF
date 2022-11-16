@@ -14,7 +14,7 @@ import hu.bme.aut.sportfogadassegito.szelveny.data.Szelveny
 import hu.bme.aut.sportfogadassegito.szelveny.data.SzelvenyDatabase
 import hu.bme.aut.sportfogadassegito.szelveny.fragment.NewSzelvenyDialogFragment
 import kotlin.concurrent.thread
-
+//todo származtatott értékek
 class SzelvenyActivity: AppCompatActivity(), SzelvenyAdapter.SzelvenyClickListener, NewSzelvenyDialogFragment.NewSzelvenyDialogListener{
     private lateinit var binding: ActivitySzelvenyBinding
 
@@ -66,6 +66,7 @@ class SzelvenyActivity: AppCompatActivity(), SzelvenyAdapter.SzelvenyClickListen
         thread {
             database.szelvenyDao().deleteItem(item)
             meccsDB.meccsDao().deleteSelectedSzelveny(item)
+
             runOnUiThread {
                 adapter.deleteItem(item)
             }

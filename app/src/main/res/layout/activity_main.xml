@@ -37,14 +37,14 @@
             android:text="@string/szelvenyek" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttontoStatisztika"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/statisztikak" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttontoTeamStatisztika"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
