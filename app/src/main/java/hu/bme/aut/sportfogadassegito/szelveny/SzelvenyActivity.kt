@@ -15,6 +15,8 @@ import hu.bme.aut.sportfogadassegito.szelveny.data.SzelvenyDatabase
 import hu.bme.aut.sportfogadassegito.szelveny.fragment.NewSzelvenyDialogFragment
 import kotlin.concurrent.thread
 //todo származtatott értékek
+
+//todo kötelező értékekhez errorMessage
 class SzelvenyActivity: AppCompatActivity(), SzelvenyAdapter.SzelvenyClickListener, NewSzelvenyDialogFragment.NewSzelvenyDialogListener{
     private lateinit var binding: ActivitySzelvenyBinding
 

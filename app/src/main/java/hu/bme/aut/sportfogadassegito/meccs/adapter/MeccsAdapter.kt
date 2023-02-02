@@ -11,6 +11,7 @@ class MeccsAdapter(private val listener: MeccsClickListener) :
 
 //todo lenyitható ablak csapatválasztó
     //todo radiobutton kinyer
+    //todo kötelező értékekhez errorMessage
     private val items = mutableListOf<Meccs>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MeccsViewHolder(
         ItemMeccsekBinding.inflate(LayoutInflater.from(parent.context), parent, false)
