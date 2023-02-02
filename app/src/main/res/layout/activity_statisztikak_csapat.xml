@@ -62,7 +62,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="@string/search">
 
             </Button>
