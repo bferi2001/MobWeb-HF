@@ -22,7 +22,7 @@ class MeccsAdapter(private val listener: MeccsClickListener) :
         val meccsItem = items[position]
 
         holder.binding.isWin.isChecked = meccsItem.isWin
-        holder.binding.tvStartingTime.text = "ToDo"
+        holder.binding.tvStartingTime.text = "${meccsItem.date}"
         holder.binding.tvHomeTeam.text = "${meccsItem.homeName} : "
         holder.binding.tvAwayTeam.text = "${meccsItem.awayName   }"
         holder.binding.tvHomeScore.text = "   ${meccsItem.homeScore}:"

@@ -14,3 +14,4 @@ data class Szelveny (
     @ColumnInfo(name = "is_Ended") var isEnded: Boolean
 )
 
+//todo várható nyeremény automatikus számítása meccsoddsokból

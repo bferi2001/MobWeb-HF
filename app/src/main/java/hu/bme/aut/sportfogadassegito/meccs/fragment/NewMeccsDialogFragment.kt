@@ -59,7 +59,8 @@ class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
         odds = binding.etMatchOdds.text.toString().toDouble(),
         expectedWinner=binding.isHome.isChecked,
         isWin = binding.isWin.isChecked,
-        isEnded = binding.isEnded.isChecked
+        isEnded = binding.isEnded.isChecked,
+        date = binding.etDate.text.toString()
     )
     /*public fun onRadioButtonClicked(view: View) {
         if (view is RadioButton) {
