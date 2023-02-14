@@ -32,4 +32,7 @@
     <string name="search">Keresés</string>
     <string name="teamwinrate">Csapat győzelmi aránya:</string>
     <string name="yourwinrateonteammatches">"A találati arányod a csapat meccsein: "</string>
+    <string name="valasztas">Választás</string>
+    <string name="time">Időpont</string>
+    <string name="megse">Mégse</string>
 </resources>

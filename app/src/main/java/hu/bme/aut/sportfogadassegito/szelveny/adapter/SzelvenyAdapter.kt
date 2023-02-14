@@ -1,5 +1,6 @@
 package hu.bme.aut.sportfogadassegito.szelveny.adapter
 
+import android.annotation.SuppressLint
 import android.view.*
 import androidx.recyclerview.widget.RecyclerView
 import hu.bme.aut.sportfogadassegito.databinding.ItemSzelvenyekBinding
@@ -15,6 +16,8 @@ class SzelvenyAdapter(private val listener: SzelvenyClickListener) :
         )
 
 
+
+        @SuppressLint("SetTextI18n")
         override fun onBindViewHolder(holder: SzelvenyViewHolder, position: Int) {
             val szelvenyItem = items[position]
 
@@ -24,7 +27,7 @@ class SzelvenyAdapter(private val listener: SzelvenyClickListener) :
             holder.binding.tvPrice.text = "${szelvenyItem.price} HUF"
             holder.binding.tvExpectedPrize.text = "${szelvenyItem.expectedPrize} HUF"
 
-            holder.binding.isWin.setOnCheckedChangeListener { buttonView, isChecked ->
+            holder.binding.isWin.setOnCheckedChangeListener { _, isChecked ->
                 szelvenyItem.isWin = isChecked
                 listener.onItemChanged(szelvenyItem)
             }
@@ -47,6 +50,7 @@ class SzelvenyAdapter(private val listener: SzelvenyClickListener) :
         notifyItemInserted(items.size - 1)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun update(shoppingItems: List<Szelveny>) {
         items.clear()
         items.addAll(shoppingItems)

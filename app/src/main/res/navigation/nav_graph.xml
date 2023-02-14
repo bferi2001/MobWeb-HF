@@ -2,4 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph" />
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newMeccsDialogFragment">
+    <dialog
+        android:id="@+id/datePickerDialogFragment"
+        android:name="hu.bme.aut.sportfogadassegito.meccs.fragment.DatePicker.DatePickerDialogFragment"
+        android:label="DatePickerDialogFragment" />
+    <dialog
+        android:id="@+id/timePickerDialogFragment"
+        android:name="hu.bme.aut.sportfogadassegito.meccs.fragment.TimePicker.TimePickerDialogFragment"
+        android:label="TimePickerDialogFragment" />
+    <dialog
+        android:id="@+id/newMeccsDialogFragment"
+        android:name="hu.bme.aut.sportfogadassegito.meccs.fragment.NewMeccsDialogFragment"
+        android:label="NewMeccsDialogFragment" >
+        <action
+            android:id="@+id/action_newMeccsDialogFragment_to_datePickerDialogFragment"
+            app:destination="@id/datePickerDialogFragment" />
+        <action
+            android:id="@+id/action_newMeccsDialogFragment_to_timePickerDialogFragment"
+            app:destination="@id/timePickerDialogFragment" />
+    </dialog>
+</navigation>

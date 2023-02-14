@@ -1,6 +1,7 @@
 package hu.bme.aut.sportfogadassegito.meccs.fragment
 
 import android.app.Dialog
+import android.app.ProgressDialog.show
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,10 +14,16 @@ import hu.bme.aut.sportfogadassegito.R
 import hu.bme.aut.sportfogadassegito.databinding.DialogNewMeccsBinding
 import hu.bme.aut.sportfogadassegito.meccs.data.Meccs
 import java.text.SimpleDateFormat
+import android.widget.*
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import hu.bme.aut.sportfogadassegito.meccs.fragment.DatePicker.DatePickerDialogFragment
+import java.util.Calendar
 
 
 class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
     val formatter = SimpleDateFormat("yyyy. MM. dd")
+
     //var willHomeWin: Boolean=true
 
     interface NewMeccsDialogListener {
@@ -27,6 +34,8 @@ class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
 
     private lateinit var binding: DialogNewMeccsBinding
 
+
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         listener = context as? NewMeccsDialogListener
@@ -36,6 +45,27 @@ class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = DialogNewMeccsBinding.inflate(LayoutInflater.from(context))
 
+        binding.btnDateSelector.setOnClickListener{
+            findNavController().navigate(R.id.action_newMeccsDialogFragment_to_datePickerDialogFragment)
+        }
+
+        binding.btnTimeSelector.setOnClickListener{
+            findNavController().navigate(R.id.action_newMeccsDialogFragment_to_timePickerDialogFragment)
+        }
+
+
+        /*findNavController()
+            .currentBackStackEntry
+            ?.savedStateHandle
+            ?.getLiveData<DatePickerDialogFragment.DatePickerResult>(DATE_SELECTED_KEY)
+            ?.observe(viewLifecycleOwner) {
+                val numHolidays = DataManager.holidays
+                if (DataManager.remainingHolidays > 0){
+                    DataManager.holidays = numHolidays + 1
+                }
+                loadHolidays()
+            }
+        loadHolidays()*/
 
         return AlertDialog.Builder(requireContext())
             .setTitle(R.string.new_meccs)
@@ -83,5 +113,8 @@ class NewMeccsDialogFragment(var szelvenyId: Long): DialogFragment() {
 
     companion object {
         const val TAG = "NewMeccsDialogFragment"
+        const val DATE_SELECTED_KEY = "date_selected"
+        const val TIME_SELECTED_KEY = "time_selected"
     }
+
 }

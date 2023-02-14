@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/activity_meccs.xml" value="0.16576086956521738" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/activity_statisztikak.xml" value="0.14" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/activity_statisztikak_csapat.xml" value="0.24547101449275363" />
+        <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/activity_szelveny.xml" value="0.20052083333333334" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/dialog_new_meccs.xml" value="0.25" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/item_meccsek.xml" value="0.2713541666666667" />
+        <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/MobWeb-HF/app/src/main/res/layout/item_szelvenyek.xml" value="0.5" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.115" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Feco/Egyetem/5/MobWeb/Hazi/Project/app/src/main/res/layout/activity_meccs.xml" value="0.3146067415730337" />

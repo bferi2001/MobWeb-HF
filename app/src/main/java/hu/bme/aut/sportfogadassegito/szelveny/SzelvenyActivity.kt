@@ -30,6 +30,7 @@ class SzelvenyActivity: AppCompatActivity(), SzelvenyAdapter.SzelvenyClickListen
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
+
         database = SzelvenyDatabase.getDatabase(applicationContext)
         meccsDB = MeccsDatabase.getDatabase(applicationContext)
 
